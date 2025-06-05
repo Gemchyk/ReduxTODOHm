@@ -7,9 +7,6 @@ import TODOItem from './TODOItem';
 function TODOList({}) {
 
     const store = useSelector(state => state.todos.data);
-    
-
-    console.log(store);
 
     return (
         <>

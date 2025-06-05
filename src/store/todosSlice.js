@@ -24,9 +24,6 @@ const todosSlice = createSlice({
     initialState,
     reducers: {
         addTodoItem: (state, action) => {
-            console.log(state);
-            console.log(action);
-            console.log(action.payload);
             state.data.push({value: action.payload.value, id: Date.now()});
         },
 

@@ -5,9 +5,7 @@ import { useRef } from 'react';
 function AddForm(props) {
 
     const dispatch = useDispatch();
-
-    const valueRef = useRef()
-    console.log(dispatch);
+    const valueRef = useRef();
 
     function handleSubmit(){
         if(valueRef.current.value > 0){
