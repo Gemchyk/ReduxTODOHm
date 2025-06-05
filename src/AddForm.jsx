@@ -8,6 +8,12 @@ function AddForm(props) {
 
     const valueRef = useRef()
     console.log(dispatch);
+
+    function handleSubmit(){
+        if(valueRef.current.value > 0){
+            dispatch({ type: 'todos/addTodoItem', payload:  {value: valueRef.current.value}})
+        }
+    }
     
 
 
@@ -16,7 +22,7 @@ function AddForm(props) {
             <form action="">
                 <input type="text"  ref={valueRef}/>
             </form>
-            <button onClick={() => dispatch({ type: 'todos/addTodoItem', payload:  {value: valueRef.current.value}})} >Add</button>
+            <button onClick={handleSubmit} >Add</button>
         </div>
     );
 }
